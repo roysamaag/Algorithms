@@ -1,0 +1,5 @@
+C:\Home\Roy\Projects\Algorithms\Algorithms\DataStructures\bin\Debug\DataStructures.dll
+C:\Home\Roy\Projects\Algorithms\Algorithms\DataStructures\bin\Debug\DataStructures.pdb
+C:\Home\Roy\Projects\Algorithms\Algorithms\DataStructures\obj\Debug\DataStructures.csprojResolveAssemblyReference.cache
+C:\Home\Roy\Projects\Algorithms\Algorithms\DataStructures\obj\Debug\DataStructures.dll
+C:\Home\Roy\Projects\Algorithms\Algorithms\DataStructures\obj\Debug\DataStructures.pdb
