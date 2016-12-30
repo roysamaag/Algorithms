@@ -8,6 +8,7 @@ namespace DataStructures
 {
     public class Queue
     {
+
         GenericNode<int> head = null;
         GenericNode<int> tail = null;
         GenericNode<string> movieQueue = null;
