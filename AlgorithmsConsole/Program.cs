@@ -15,9 +15,9 @@ namespace AlgorithmsConsole
             for (int i = 0; i < 1000000; i++)
                 q.Enqueue(i);
 
-
+            int t = 0;
             for (int i = 0; i < 1000000; i++)
-                q.Dequeue();
+                 t = q.Dequeue();
 
 
             //var linkedList = new LinkedList();

@@ -33,10 +33,15 @@ namespace DataStructures
             }
         }
 
-        public void Dequeue()
+        public int Dequeue()
         {
+            int data = -1;
             if (head != null)
+            {
+                data = head.Data;
                 head = head.Next;
+            }
+            return data;
         }
 
         public void EnqueueMovie(string data)
