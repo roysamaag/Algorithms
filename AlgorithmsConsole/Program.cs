@@ -11,7 +11,16 @@ namespace AlgorithmsConsole
     {
         static void Main(string[] args)
         {
-            var linkedList = new LinkedList();
+            Queue q = new Queue();
+            for (int i = 0; i < 1000000; i++)
+                q.Enqueue(i);
+
+
+            for (int i = 0; i < 1000000; i++)
+                q.Dequeue();
+
+
+            //var linkedList = new LinkedList();
             //linkedList.Create();
 
             //Console.WriteLine("Insert in Front");
@@ -42,9 +51,9 @@ namespace AlgorithmsConsole
             //Console.WriteLine("Delete Tail Node");
             //linkedList.DeleteTailNode();
 
-            Console.WriteLine("");
-            Console.WriteLine("Sort");
-            linkedList.Sort();
+            //Console.WriteLine("");
+            //Console.WriteLine("Sort");
+            //linkedList.Sort();
 
             Console.ReadKey();
         }
