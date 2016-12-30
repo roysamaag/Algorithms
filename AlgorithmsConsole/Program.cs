@@ -16,12 +16,13 @@ namespace AlgorithmsConsole
                 q.Enqueue(i);
 
             int t = 0;
+
             for (int i = 0; i < 1000000; i++)
                  t = q.Dequeue();
 
 
-            //var linkedList = new LinkedList();
-            //linkedList.Create();
+            var linkedList = new LinkedList();
+            linkedList.Create();
 
             //Console.WriteLine("Insert in Front");
             //linkedList.InsertFront(new Node { Name = "*Inserted*" });
