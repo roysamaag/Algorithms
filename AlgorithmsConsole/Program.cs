@@ -11,14 +11,22 @@ namespace AlgorithmsConsole
     {
         static void Main(string[] args)
         {
-            Queue q = new Queue();
-            for (int i = 0; i < 1000000; i++)
-                q.Enqueue(i);
+            Strings strings = new Strings();
+            //Console.WriteLine(strings.NeedleInHayStack("A toyota, race fast, safe car, a toyota", "ast"));
 
-            int t = 0;
+            //Console.WriteLine(strings.Occurs("A toyota, raroyce fast, roy sam s roy tafe car, a toyroyota", " roy "));
 
-            for (int i = 0; i < 1000000; i++)
-                 t = q.Dequeue();
+            //Console.WriteLine(strings.ReverseStringByChars("The quick brown fox jumped over the lazy dog"));
+            Console.WriteLine(strings.ReverseStringByWords("The quick brown fox jumped over the lazy dog"));
+
+            //Queue q = new Queue();
+            //for (int i = 0; i < 1000000; i++)
+            //    q.Enqueue(i);
+
+            //int t = 0;
+
+            //for (int i = 0; i < 1000000; i++)
+            //     t = q.Dequeue();
 
 
             var linkedList = new LinkedList();
