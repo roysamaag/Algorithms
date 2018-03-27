@@ -17,7 +17,10 @@ namespace AlgorithmsConsole
             //Console.WriteLine(strings.Occurs("A toyota, raroyce fast, roy sam s roy tafe car, a toyroyota", " roy "));
 
             //Console.WriteLine(strings.ReverseStringByChars("The quick brown fox jumped over the lazy dog"));
-            Console.WriteLine(strings.ReverseStringByWords("The quick brown fox jumped over the lazy dog"));
+            //Console.WriteLine(strings.ReverseStringByWords("The quick brown fox jumped over the lazy dog"));
+            Console.WriteLine(strings.IsPalindrome("Able was I ere, I saw elba"));
+            Console.WriteLine(strings.IsPalindromeByChar("Able was I ere, I saw elba"));
+
 
             //Queue q = new Queue();
             //for (int i = 0; i < 1000000; i++)

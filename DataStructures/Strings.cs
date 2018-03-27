@@ -41,6 +41,51 @@ namespace DataStructures
             return reversedString;
         }
 
+        public bool IsPalindrome(string sentence)
+        {
+            sentence = sentence.Replace(" ", "").Replace(",","").ToLower();
+            for (int i = 0; i <= sentence.Length - 1; i++)
+            {
+                if (sentence[i] <= sentence[sentence.Length-1 - i])
+                {
+                    if (sentence[i] != sentence[sentence.Length-1 - i])
+                        return false;
+                }
+            }
+            return true;
+        }
+
+        public bool IsPalindromeByChar(string sentence)
+        {
+            sentence = sentence.ToLower();
+            int index = 0;
+            int lastIndex = sentence.Length - 1;
+
+            while (index < lastIndex)
+            {
+                char forwardChar = sentence[index];
+                char reverseChar = sentence[lastIndex];
+                while (forwardChar == ' ' || forwardChar == ',')
+                {
+                    index++;
+                    forwardChar = sentence[index];
+                }
+                while (reverseChar == ' ' || forwardChar == ',')
+                {
+                    lastIndex--;
+                    reverseChar = sentence[lastIndex];
+                }
+
+                if (forwardChar != reverseChar)
+                    return false;
+
+                index++;
+                lastIndex--;
+            }
+
+            return true;
+        }
+
         public string ReverseStringByChars(string sentence)
         {
             string reversedString = string.Empty;
@@ -73,5 +118,6 @@ namespace DataStructures
             }
             return count;
         }
+
     }
 }
