@@ -70,7 +70,7 @@ namespace DataStructures
                     index++;
                     forwardChar = sentence[index];
                 }
-                while (reverseChar == ' ' || forwardChar == ',')
+                while (reverseChar == ' ' || reverseChar == ',')
                 {
                     lastIndex--;
                     reverseChar = sentence[lastIndex];
@@ -85,6 +85,17 @@ namespace DataStructures
 
             return true;
         }
+
+        public string ReverseStringQuick(String str)
+        {
+            if (str.Length <= 1)
+            {
+                return str;
+            }
+
+            return ReverseStringQuick(str.Substring(1))  + str.Substring(0,1);
+        }
+
 
         public string ReverseStringByChars(string sentence)
         {

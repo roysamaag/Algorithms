@@ -8,37 +8,47 @@ namespace DataStructures
 {
     public class Problems
     {
-        long[] f = null;
-
-        public long Fibonacci(int n)
+        public long Fibonacci_Recusrive(int n)
         {
-            if (n == 0) return 0;
-            if (n == 1) return 1;
+            if (n <= 1) return n;
 
-            if (f[n] == -1)
-                f[n] = (Fibonacci(n - 1) + Fibonacci(n - 2));
+            long tt = (Fibonacci_Recusrive(n - 1) + Fibonacci_Recusrive(n - 2));
+            
+            Console.WriteLine(n);
+            return tt;
 
-
-            return f[n];
         }
 
-
-        public long Fibonacci_c(int n)
+        public int[] Fibonacci_Dynamic(int n)
         {
-            f = new long[n + 1];
+            int[] arr = new int[n + 1];
 
-            f[0] = 0;
-            f[1] = 1;
+            arr[0] = 0;
+            arr[1] = 1;
 
-            for (long i = 2; i <= n; i++)
-                f[i] = -1;
+            for (int i = 2; i <= n; i++)
+            {
+                arr[i] = arr[i - 1] + arr[i - 2];
+            }
 
+            return arr;
 
-            return (Fibonacci(n));
         }
 
+        public int Fibonacci_nonRecursive(int n)
+        {
+            int a = 0;
+            int b = 1;
+            int temp = 0;
+            for (int i = 0; i < n; i++)
+            {
+                temp = a + b;
+                a = b;
+                b = temp;
+            }
 
-
+            return b;
+        }
 
     }
 }
