@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataStructures
 {
@@ -46,11 +42,11 @@ namespace DataStructures
             sentence = sentence.Replace(" ", "").Replace(",","").ToLower();
             for (int i = 0; i <= sentence.Length - 1; i++)
             {
-                if (sentence[i] <= sentence[sentence.Length-1 - i])
-                {
+               // if (sentence[i] <= sentence[sentence.Length-1 - i])
+               // {
                     if (sentence[i] != sentence[sentence.Length-1 - i])
                         return false;
-                }
+               // }
             }
             return true;
         }
@@ -128,6 +124,30 @@ namespace DataStructures
                 
             }
             return count;
+        }
+
+        public string RemoveDuplicatesFromString(string text)
+        {
+            string checkString = string.Empty;
+            string newString = string.Empty;
+
+            for (int i = 0; i <= text.Length - 1; i++)
+            {
+                if (text[i] == text[i + 1])
+                {
+                    checkString += text[i];
+                }
+                else
+                    checkString = string.Empty;
+
+                if (checkString.Length == 3)
+                {
+                    checkString = string.Empty;
+                }
+                newString += checkString;
+            }
+
+            return "";
         }
 
     }

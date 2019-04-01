@@ -13,18 +13,18 @@ namespace AlgorithmsConsole
         {
             Strings strings = new Strings();
             //Console.WriteLine(strings.ReverseStringQuick("str"));
-            //Console.WriteLine(strings.ReverseStringQuick("david roy"));
+            Console.WriteLine(strings.ReverseStringQuick("david roy"));
             //Console.WriteLine(strings.NeedleInHayStack("A toyota, race fast, safe car, a toyota", "ast"));
 
             //Console.WriteLine(strings.Occurs("A toyota, raroyce fast, roy sam s roy tafe car, a toyroyota", " roy "));
 
             //Console.WriteLine(strings.ReverseStringByChars("The quick brown fox jumped over the lazy dog"));
             //Console.WriteLine(strings.ReverseStringByWords("The quick brown fox jumped over the lazy dog"));
-            //Console.WriteLine(strings.IsPalindrome("Able was I ere, I saw elba"));
+           // Console.WriteLine(strings.IsPalindrome("Able was I ere, I saw elboa"));
             //Console.WriteLine(strings.IsPalindromeByChar("Able was I ere, I saw elba"));
 
             Problems p = new Problems();
-            Console.WriteLine(p.Fibonacci_Dynamic(9));
+            //Console.WriteLine(p.Fibonacci_Dynamic(9));
 
 
             //Queue q = new Queue();
