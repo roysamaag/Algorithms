@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Text;
 
 namespace DataStructures
 {
@@ -126,28 +128,28 @@ namespace DataStructures
             return count;
         }
 
-        public string RemoveDuplicatesFromString(string text)
+        public string RemoveDuplicatesFromString(string text, int count)
         {
-            string checkString = string.Empty;
-            string newString = string.Empty;
-
+            text = text + " ";
+            StringBuilder newString = new StringBuilder();
+            int writePtr = 0;
             for (int i = 0; i <= text.Length - 1; i++)
             {
-                if (text[i] == text[i + 1])
+                if (i == 0 || text[i] != text[i - 1])
                 {
-                    checkString += text[i];
+                    if (i - writePtr != count)
+                    {
+                        for (int j = writePtr; j < i; j++)
+                        {
+                            newString.Append(text[j]);
+                            writePtr = j + 1;
+                        }
+                    }
+                    else
+                        writePtr = writePtr + count;
                 }
-                else
-                    checkString = string.Empty;
-
-                if (checkString.Length == 3)
-                {
-                    checkString = string.Empty;
-                }
-                newString += checkString;
             }
-
-            return "";
+            return newString.ToString();
         }
 
     }
